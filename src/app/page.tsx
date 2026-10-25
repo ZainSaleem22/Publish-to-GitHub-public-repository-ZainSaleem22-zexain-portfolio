@@ -3,10 +3,13 @@
 import { motion } from "framer-motion";
 import { Code, Palette, GitFork, Globe, Mail, ExternalLink, Layers, Target, Briefcase, Monitor, Cpu, PenTool, Film, Sparkles, Zap } from "lucide-react";
 import { useState } from "react";
+import ParticleBackground from "@/components/ParticleBackground";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white relative selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen text-white relative selection:bg-cyan-500 selection:text-slate-950">
+      <ParticleBackground />
+      <div className="absolute inset-0 bg-slate-950/60 pointer-events-none" />
       {/* Fixed Glassmorphism Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-lg border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -37,7 +40,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 px-6">
+      <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 px-6 z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
